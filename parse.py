@@ -78,7 +78,7 @@ class Parser:
         pass
 
 
-with open("recipe.txt", "r") as f, open("recipes.lua", "w") as f2:
+with open("recipe.txt", "r") as f, open("./static/recipes.lua", "w") as f2:
     recipes = {}
 
     for line in f:
@@ -111,7 +111,7 @@ with open("recipe.txt", "r") as f, open("recipes.lua", "w") as f2:
             
         
 
-with open("stock.txt", "r") as f, open("stock.lua", "w") as f2:
+with open("stock.txt", "r") as f, open("./static/stock.lua", "w") as f2:
     stock = {}
 
     for line in f:
@@ -119,11 +119,13 @@ with open("stock.txt", "r") as f, open("stock.lua", "w") as f2:
         target = parser.read_string()
         parser.read_expect(":")
         stock[target] = parser.read_num()
+
+    
     
     f2.write("return {}".format(dump_lua(stock)))
 
-with open("version.txt", "w") as f:
+with open("./static/version.txt", "r") as f:
     version = int(f.read().strip())
 
-with open("version.txt", "w") as f:
-    f.write(str(version))
+with open("./static/version.txt", "w") as f:
+    f.write(str(version + 1))
