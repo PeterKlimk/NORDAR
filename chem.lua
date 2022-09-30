@@ -21,7 +21,6 @@ function update()
     recipes = dofile("recipes.lua")
 
     print("Updated stock / recipes.")
-    do
 end
 
 update()
