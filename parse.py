@@ -2,7 +2,7 @@ import re
 
 def dump_lua(data):
     if type(data) is str:
-        return f'"{re.escape(data)}"'
+        return f'"{data}"'
     elif type(data) in (int, float):
         return f'{data}'
     elif type(data) is bool:
@@ -78,7 +78,7 @@ class Parser:
         pass
 
 
-with open("recipe.txt", "r") as f, open("recipe.lua", "w") as f2:
+with open("recipe.txt", "r") as f, open("recipes.lua", "w") as f2:
     recipes = {}
 
     for line in f:
