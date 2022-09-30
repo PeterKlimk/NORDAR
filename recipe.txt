@@ -1,0 +1,2 @@
+[24] 1000 "Tetrafluoroethylene" = 12000 "Chlorine" + 4000 "Hydrofluoric Acid" + 2000 "Methane"
+[1] 216 "Molten Polytetrafluoroethylene" = 144 "Tetrafluoroethylene" + 1000 "Oxygen"
