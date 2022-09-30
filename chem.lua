@@ -38,7 +38,7 @@ function get_stock()
                 stock[tank.label] = 0
             end
 
-            stock[tank.label] += tank.amount
+            stock[tank.label] = stock[tank.label] + tank.amount
         end
     end
 
