@@ -121,3 +121,9 @@ with open("stock.txt", "r") as f, open("stock.lua", "w") as f2:
         stock[target] = parser.read_num()
     
     f2.write("return {}".format(dump_lua(stock)))
+
+with open("version.txt", "w") as f:
+    version = int(f.read().strip())
+
+with open("version.txt", "w") as f:
+    f.write(str(version))
